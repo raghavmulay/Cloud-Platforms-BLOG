@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cloud Monitoring Platforms in 2026: The Definitive Guide for Engineers & Decision-Makers. Platform comparisons, hidden costs, implementation blueprints, and stack recommendations." />
+  <title>Cloud Monitoring 2026 — The Definitive Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a class="nav-brand" href="#hero">
+        <span class="brand-icon">☁</span>
+        Cloud Monitoring 2026
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a class="nav-link" href="#crisis">Crisis</a></li>
+        <li><a class="nav-link" href="#fundamentals">Fundamentals</a></li>
+        <li><a class="nav-link" href="#platforms">Platforms</a></li>
+        <li><a class="nav-link" href="#comparison">Comparison</a></li>
+        <li><a class="nav-link" href="#decision">Decision</a></li>
+        <li><a class="nav-link" href="#costs">Costs</a></li>
+        <li><a class="nav-link" href="#implementation">Implementation</a></li>
+        <li><a class="nav-link" href="#trends">Trends</a></li>
+        <li><a class="nav-link" href="#recommendation">Recommend</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════ HERO ═══════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-container">
+      <div class="hero-badge">Definitive Guide · 2026 Edition</div>
+      <h1 class="hero-title">Cloud Monitoring Platforms<br/><span class="hero-accent">in 2026</span></h1>
+      <p class="hero-subtitle">The Definitive Guide for Engineers &amp; Decision-Makers</p>
+      <p class="hero-desc">From the monitoring crisis that broke teams to the AI-powered stacks that are quietly fixing it — a complete, no-fluff breakdown with platform comparisons, hidden costs, implementation guides, trend analysis, and a personalized stack recommendation framework.</p>
+      <div class="hero-callout">
+        <span class="callout-icon">📋</span>
+        A Complete Guide for Engineers &amp; Decision-Makers
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ 01 CRISIS ══ -->
+  <section class="section" id="crisis">
+    <div class="container">
+      <div class="section-label fade-in">01 — The 2026 Monitoring Crisis</div>
+      <h2 class="section-title fade-in">What Broke and Why</h2>
+      <p class="section-intro fade-in">Something bizarre occurred within the realm of observability between 2024 and 2026. Teams aren't using fewer tools — almost everyone uses <em>more</em> monitoring tools compared to before. Yet engineers still ask the same question during incidents: <strong>"Where is the actual problem?"</strong></p>
+
+      <div class="stats-grid fade-in">
+        <div class="stat-card stat-red">
+          <div class="stat-number">67%</div>
+          <div class="stat-label">Teams cite alert fatigue as top problem</div>
+        </div>
+        <div class="stat-card stat-amber">
+          <div class="stat-number">3.4×</div>
+          <div class="stat-label">Avg. tool sprawl increase since 2022</div>
+        </div>
+        <div class="stat-card stat-blue">
+          <div class="stat-number">$5.6M</div>
+          <div class="stat-label">Avg. cost per major outage in 2025</div>
+        </div>
+        <div class="stat-card stat-teal">
+          <div class="stat-number">82%</div>
+          <div class="stat-label">Orgs running 3+ monitoring tools</div>
+        </div>
+      </div>
+
+      <h3 class="subsection-title fade-in">What Changed</h3>
+      <div class="two-col fade-in">
+        <div class="compare-box compare-old">
+          <div class="compare-heading">🕰 2018 Infrastructure</div>
+          <ul>
+            <li>10–20 servers</li>
+            <li>Simple APIs</li>
+            <li>Predictable traffic</li>
+          </ul>
+        </div>
+        <div class="compare-box compare-new">
+          <div class="compare-heading">⚡ 2026 Infrastructure</div>
+          <ul>
+            <li>40–200+ microservices</li>
+            <li>Kubernetes-based deployments</li>
+            <li>Third-party dependencies everywhere</li>
+            <li>AI/LLM workloads with unpredictable latency</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="subsection-title fade-in">The Three Root Causes</h3>
+      <div class="cause-list fade-in">
+        <div class="cause-item">
+          <div class="cause-num">1</div>
+          <div>
+            <strong>Increasing tools without consolidation.</strong>
+            Most organizations do not have an explicitly planned monitoring stack — they develop one over time. Prometheus for metrics, Datadog for APM, then a security tool added later. The result: fragmented data with no unified view.
+          </div>
+        </div>
+        <div class="cause-item">
+          <div class="cause-num">2</div>
+          <div>
+            <strong>Metrics-only thinking in a traces-and-logs world.</strong>
+            Classic monitoring focused on CPU, memory, and request rate. Modern distributed failures don't manifest in metrics alone. Traces are where real debugging happens.
+          </div>
+        </div>
+        <div class="cause-item">
+          <div class="cause-num">3</div>
+          <div>
+            <strong>The cost model broke at scale.</strong>
+            Pricing that seemed reasonable breaks when hundreds of Kubernetes pods generate tens of thousands of metrics daily. Costs don't grow steadily — they spike.
+          </div>
+        </div>
+      </div>
+
+      <div class="callout callout-warning fade-in">
+        <div class="callout-title">⚠ The Core Problem</div>
+        The monitoring crisis of 2026 isn't a technology failure. It's an <strong>architectural and economic failure</strong>. Teams are using tools designed for 2018 infrastructure to monitor 2026 infrastructure. The gap is significant — and increasingly expensive to ignore.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ 02 FUNDAMENTALS ═ -->
+  <section class="section section-alt" id="fundamentals">
+    <div class="container">
+      <div class="section-label fade-in">02 — Fundamentals</div>
+      <h2 class="section-title fade-in">What Good Monitoring Actually Requires</h2>
+      <p class="section-intro fade-in">Good monitoring is not about collecting data — it's about making that data useful when something breaks. In 2026, where even small applications depend on multiple services, APIs, and cloud components, <em>knowing that something is wrong is not enough</em>. You need to understand <strong>why</strong> it is wrong.</p>
+
+      <div class="pillars-grid fade-in">
+        <div class="pillar-card">
+          <div class="pillar-icon pillar-icon-blue">📊</div>
+          <h3>Metrics</h3>
+          <p>High-level view of system health: request rates, latency, or resource usage. Useful for spotting patterns and detecting deviations from normal behaviour.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon pillar-icon-green">📝</div>
+          <h3>Logs</h3>
+          <p>Detailed events happening inside your system. Well-structured logs help you understand what exactly happened at a specific point in time.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon pillar-icon-purple">🔍</div>
+          <h3>Traces</h3>
+          <p>Follow a single request as it moves across multiple services. Where most real debugging happens today, especially in distributed systems.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon pillar-icon-orange">⚡</div>
+          <h3>Profiling</h3>
+          <p>Identifies performance bottlenecks inside your application — slow functions, inefficient resource usage, and hot paths that degrade latency.</p>
+        </div>
+      </div>
+
+      <div class="callout callout-info fade-in">
+        <div class="callout-title">🔗 The Key Difference in 2026</div>
+        It's not just having these four signals — it's <strong>connecting them</strong>. A spike in latency should link to the exact trace, which should connect to the relevant logs, all within the same workflow. <strong>OpenTelemetry</strong> provides the common instrumentation layer that enables this — keeping your data collection independent of whichever backend you choose.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ 03 PLATFORMS ══ -->
+  <section class="section" id="platforms">
+    <div class="container">
+      <div class="section-label fade-in">03 — Platform Overview</div>
+      <h2 class="section-title fade-in">Know Who You're Dealing With</h2>
+      <p class="section-intro fade-in">Each monitoring platform was built with a distinct design philosophy. That original intent still shapes how it behaves today. Understanding this context makes feature comparisons much clearer.</p>
+
+      <div class="platforms-grid fade-in">
+
+        <div class="platform-card">
+          <div class="platform-header">
+            <div class="platform-name">Datadog</div>
+            <div class="platform-tag tag-enterprise">Enterprise</div>
+          </div>
+          <div class="platform-meta">
+            <span class="meta-item"><strong>Best For:</strong> Enterprise full-stack</span>
+            <span class="meta-item"><strong>Pricing:</strong> Per host + per metric</span>
+            <span class="meta-item"><strong>Setup:</strong> Low complexity</span>
+          </div>
+          <div class="platform-strength">✅ <strong>Strength:</strong> All-in-one, best integrations, refined UX out of the box</div>
+          <div class="platform-weakness">⚠ <strong>Weakness:</strong> Pricing scales quickly and unpredictably at volume</div>
+          <div class="platform-verdict verdict-premium">Best-in-class, expensive</div>
+        </div>
+
+        <div class="platform-card">
+          <div class="platform-header">
+            <div class="platform-name">Grafana + Prometheus</div>
+            <div class="platform-tag tag-oss">Open Source</div>
+          </div>
+          <div class="platform-meta">
+            <span class="meta-item"><strong>Best For:</strong> OSS / self-hosted</span>
+            <span class="meta-item"><strong>Pricing:</strong> Free (infra cost only)</span>
+            <span class="meta-item"><strong>Setup:</strong> High complexity</span>
+          </div>
+          <div class="platform-strength">✅ <strong>Strength:</strong> Maximum flexibility, control over storage and queries</div>
+          <div class="platform-weakness">⚠ <strong>Weakness:</strong> Operational overhead is 0.5–1 FTE at scale</div>
+          <div class="platform-verdict verdict-oss">Powerful, ops-heavy</div>
+        </div>
+
+        <div class="platform-card">
+          <div class="platform-header">
+            <div class="platform-name">New Relic</div>
+            <div class="platform-tag tag-midmarket">Mid-Market</div>
+          </div>
+          <div class="platform-meta">
+            <span class="meta-item"><strong>Best For:</strong> Mid-market APM</span>
+            <span class="meta-item"><strong>Pricing:</strong> Per user (flat rate)</span>
+            <span class="meta-item"><strong>Setup:</strong> Very low</span>
+          </div>
+          <div class="platform-strength">✅ <strong>Strength:</strong> Generous free tier, solid APM, predictable pricing model</div>
+          <div class="platform-weakness">⚠ <strong>Weakness:</strong> Per-user cost grows quickly with large teams</div>
+          <div class="platform-verdict verdict-value">Best value SaaS</div>
+        </div>
+
+        <div class="platform-card">
+          <div class="platform-header">
+            <div class="platform-name">Dynatrace</div>
+            <div class="platform-tag tag-ai">AI-Native</div>
+          </div>
+          <div class="platform-meta">
+            <span class="meta-item"><strong>Best For:</strong> Enterprise AI-driven</span>
+            <span class="meta-item"><strong>Pricing:</strong> Per DEM unit</span>
+            <span class="meta-item"><strong>Setup:</strong> Low</span>
+          </div>
+          <div class="platform-strength">✅ <strong>Strength:</strong> Causal AI root-cause analysis, deep topology mapping</div>
+          <div class="platform-weakness">⚠ <strong>Weakness:</strong> Highest cost, complex DEM-unit pricing model</div>
+          <div class="platform-verdict verdict-premium">Top AI, highest cost</div>
+        </div>
+
+        <div class="platform-card">
+          <div class="platform-header">
+            <div class="platform-name">Honeycomb</div>
+            <div class="platform-tag tag-tracing">Tracing</div>
+          </div>
+          <div class="platform-meta">
+            <span class="meta-item"><strong>Best For:</strong> Distributed tracing</span>
+            <span class="meta-item"><strong>Pricing:</strong> Per event</span>
+            <span class="meta-item"><strong>Setup:</strong> Very low</span>
+          </div>
+          <div class="platform-strength">✅ <strong>Strength:</strong> Best-in-class trace UX, high-cardinality event analysis</div>
+          <div class="platform-weakness">⚠ <strong>Weakness:</strong> Not a complete monitoring solution; best used alongside other tools</div>
+          <div class="platform-verdict verdict-specialist">Best tracing UX</div>
+        </div>
+
+        <div class="platform-card">
+          <div class="platform-header">
+            <div class="platform-name">Elastic (ELK)</div>
+            <div class="platform-tag tag-logs">Log Analytics</div>
+          </div>
+          <div class="platform-meta">
+            <span class="meta-item"><strong>Best For:</strong> Log analytics / SIEM</span>
+            <span class="meta-item"><strong>Pricing:</strong> Per GB / tier</span>
+            <span class="meta-item"><strong>Setup:</strong> Medium</span>
+          </div>
+          <div class="platform-strength">✅ <strong>Strength:</strong> Unmatched log analytics, compliance, and SIEM capabilities</div>
+          <div class="platform-weakness">⚠ <strong>Weakness:</strong> Resource-intensive; cloud costs can be 3× Datadog at petabyte scale</div>
+          <div class="platform-verdict verdict-logs">Best for logs & security</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ 04 COMPARISON ═ -->
+  <section class="section section-alt" id="comparison">
+    <div class="container">
+      <div class="section-label fade-in">04 — Leaderboard</div>
+      <h2 class="section-title fade-in">Head-to-Head on Every Parameter</h2>
+      <p class="section-intro fade-in">Ratings based on practical usage, community feedback, engineer team surveys, and production deployment reports in 2025–2026. ★★★★★ indicates best-in-class for that parameter.</p>
+
+      <div class="table-wrapper fade-in">
+        <table class="comparison-table" id="comparisonTable">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Datadog</th>
+              <th>Grafana+Prom</th>
+              <th>New Relic</th>
+              <th>Dynatrace</th>
+              <th>Honeycomb</th>
+              <th>Elastic</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="param-name">Metrics &amp; Dashboards</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating three">★★★</td>
+              <td class="rating four">★★★★</td>
+            </tr>
+            <tr>
+              <td class="param-name">Distributed Tracing</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating three">★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating three">★★★</td>
+            </tr>
+            <tr>
+              <td class="param-name">Log Analytics</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating three">★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating two">★★</td>
+              <td class="rating five">★★★★★</td>
+            </tr>
+            <tr>
+              <td class="param-name">Alerting Quality</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating three">★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating three">★★★</td>
+            </tr>
+            <tr>
+              <td class="param-name">AI / Anomaly Detection</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating two">★★</td>
+              <td class="rating three">★★★</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating three">★★★</td>
+            </tr>
+            <tr>
+              <td class="param-name">Ease of Setup</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating two">★★</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating three">★★★</td>
+            </tr>
+            <tr>
+              <td class="param-name">Cost at Scale</td>
+              <td class="rating two">★★</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating two">★★</td>
+              <td class="rating three">★★★</td>
+              <td class="rating three">★★★</td>
+            </tr>
+            <tr>
+              <td class="param-name">Kubernetes / Cloud-Native</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating three">★★★</td>
+              <td class="rating three">★★★</td>
+            </tr>
+            <tr>
+              <td class="param-name">Security / Compliance</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating three">★★★</td>
+              <td class="rating three">★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating two">★★</td>
+              <td class="rating five">★★★★★</td>
+            </tr>
+            <tr>
+              <td class="param-name">Community &amp; Ecosystem</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating five">★★★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating three">★★★</td>
+              <td class="rating four">★★★★</td>
+              <td class="rating five">★★★★★</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info fade-in">
+        <div class="callout-title">📌 How to Read This Table</div>
+        No single platform dominates every category. Dynatrace wins on AI and automation; Elastic wins on log analytics; Grafana wins on cost and flexibility. The right choice is whichever platform is strongest in the parameters that matter most to your specific workload, team size, and budget constraints.
+      </div>
+
+      <h3 class="subsection-title fade-in">Quick Verdict by Workload</h3>
+      <div class="verdict-grid fade-in">
+        <div class="verdict-item">
+          <div class="verdict-use-case">All-in-one platform, minimal setup</div>
+          <div class="verdict-tool">Datadog or New Relic</div>
+        </div>
+        <div class="verdict-item">
+          <div class="verdict-use-case">Cost control and flexibility</div>
+          <div class="verdict-tool">Grafana + Prometheus</div>
+        </div>
+        <div class="verdict-item">
+          <div class="verdict-use-case">Complex distributed systems debugging</div>
+          <div class="verdict-tool">Honeycomb or Dynatrace</div>
+        </div>
+        <div class="verdict-item">
+          <div class="verdict-use-case">Logs, auditing, or compliance</div>
+          <div class="verdict-tool">Elastic Stack</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ 05 DECISION ═══ -->
+  <section class="section" id="decision">
+    <div class="container">
+      <div class="section-label fade-in">05 — Decision Framework</div>
+      <h2 class="section-title fade-in">How to Actually Choose</h2>
+      <p class="section-intro fade-in">Choosing a monitoring platform is rarely about features alone. Most tools today cover the basics. The real difference shows up in how well a platform fits your team's size, your system's complexity, and what problem you're actually trying to solve.</p>
+
+      <div class="decision-params fade-in">
+
+        <div class="param-block">
+          <div class="param-num">01</div>
+          <div class="param-content">
+            <h3>Team Size &amp; Operational Capacity</h3>
+            <p>A team of three engineers cannot realistically maintain Prometheus + Grafana + Loki + Tempo. The operational burden alone amounts to 0.3–0.5 engineer hours constantly.</p>
+            <div class="rule-of-thumb">
+              <div class="rule-title">Rule of Thumb</div>
+              <div class="rule-items">
+                <div class="rule-item"><span class="rule-badge">Under 15 engineers</span> Choose a managed SaaS platform</div>
+                <div class="rule-item"><span class="rule-badge">15–50 engineers</span> Evaluate managed open-source (e.g., Grafana Cloud)</div>
+                <div class="rule-item"><span class="rule-badge">50+ engineers</span> Self-hosted LGTM stack becomes viable</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="param-block">
+          <div class="param-num">02</div>
+          <div class="param-content">
+            <h3>Your Primary Observability Problem</h3>
+            <p>Most teams don't need a better monitoring tool — they need clarity on what problem they're actually trying to solve. Frame it as a problem statement:</p>
+            <div class="problems-list">
+              <div class="problem-item">
+                <div class="problem-q">"Our dashboards look fine, but we still struggle with root cause during incidents."</div>
+                <div class="problem-a">→ This is a <strong>tracing gap</strong>. Consider Honeycomb or Dynatrace.</div>
+              </div>
+              <div class="problem-item">
+                <div class="problem-q">"We collect a large volume of logs, but extracting useful insight is difficult."</div>
+                <div class="problem-a">→ This is a <strong>log analysis problem</strong>. Consider Elastic Stack or Datadog Logs.</div>
+              </div>
+              <div class="problem-item">
+                <div class="problem-q">"Our monitoring costs are increasing faster than expected."</div>
+                <div class="problem-a">→ This is a <strong>cost architecture problem</strong>. Consider Grafana + VictoriaMetrics or New Relic flat-rate.</div>
+              </div>
+              <div class="problem-item">
+                <div class="problem-q">"We use multiple tools and lack a unified view of the system."</div>
+                <div class="problem-a">→ This is a <strong>consolidation problem</strong>. Consider Datadog or New Relic.</div>
+              </div>
+              <div class="problem-item">
+                <div class="problem-q">"We have strict compliance and long-term data retention requirements."</div>
+                <div class="problem-a">→ This is a <strong>governance problem</strong>. Consider Elastic Stack.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="param-block">
+          <div class="param-num">03</div>
+          <div class="param-content">
+            <h3>Monthly Budget Reality</h3>
+            <p>It all boils down to cost — not when you initially evaluate, but after a couple of months of use. Evaluate cost at your <em>expected future scale</em>, not current usage.</p>
+            <div class="budget-table-wrapper">
+              <table class="budget-table">
+                <thead>
+                  <tr><th>Platform</th><th>Monthly Cost (Mid-Scale)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Datadog</td><td>$25,000–$80,000</td></tr>
+                  <tr><td>Dynatrace</td><td>$30,000–$100,000</td></tr>
+                  <tr><td>New Relic</td><td>$4,500–$15,000</td></tr>
+                  <tr><td>Honeycomb</td><td>$3,000–$20,000</td></tr>
+                  <tr><td>Elastic Cloud</td><td>$5,000–$25,000</td></tr>
+                  <tr><td>Grafana Cloud</td><td>$800–$5,000</td></tr>
+                  <tr><td>Self-hosted LGTM</td><td>$500–$3,000 + staff time</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="callout callout-warning" style="margin-top:1rem;">
+              <div class="callout-title">⚠ Avoid the 'Start Free, Pay Later' Trap</div>
+              Free tiers reduce friction, not long-term cost. Estimate cost at 2× and 5× your current scale. Use OpenTelemetry to avoid coupling your instrumentation to a single vendor.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ 06 COSTS ═══════ -->
+  <section class="section section-alt" id="costs">
+    <div class="container">
+      <div class="section-label fade-in">06 — Hidden Costs &amp; Mistakes</div>
+      <h2 class="section-title fade-in">What Shows Up After Adoption</h2>
+      <p class="section-intro fade-in">Most monitoring platforms look straightforward during evaluation. The real friction shows up later — once data volume grows, teams scale, and workflows become dependent on the tool.</p>
+
+      <h3 class="subsection-title fade-in">Platform-Specific Hidden Costs</h3>
+      <div class="table-wrapper fade-in">
+        <table class="hidden-costs-table">
+          <thead>
+            <tr><th>Platform</th><th>Hidden Cost / Trap</th><th>Mitigation</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Datadog</td>
+              <td>Custom metric billing can 5× your base cost when ML pipelines emit high-cardinality metrics</td>
+              <td>Audit custom metrics monthly; use DogStatsD sampling; set metric budgets</td>
+            </tr>
+            <tr>
+              <td>Datadog</td>
+              <td>Log ingestion fees stack with retention fees — 30-day retention at scale is ruinous</td>
+              <td>Use log pipelines to filter before indexing; archive to S3</td>
+            </tr>
+            <tr>
+              <td>Grafana OSS</td>
+              <td>Operational overhead is 0.5–1 FTE at scale for upgrades, alert tuning, storage</td>
+              <td>Budget staff time; or use Grafana Cloud managed tier</td>
+            </tr>
+            <tr>
+              <td>New Relic</td>
+              <td>Per-user pricing punishes large teams — 50 engineers × $99/user = $5,000/month floor</td>
+              <td>Use limited-access users for read-only stakeholders</td>
+            </tr>
+            <tr>
+              <td>Dynatrace</td>
+              <td>DEM unit pricing is opaque — easy to exceed license unknowingly</td>
+              <td>Negotiate annual contracts with defined unit budgets; monitor usage weekly</td>
+            </tr>
+            <tr>
+              <td>Elastic</td>
+              <td>At scale requires significant memory and CPU — cloud costs can be 3× Datadog at petabyte scale</td>
+              <td>Use ILM (Index Lifecycle Management) aggressively; cold-tier for old indices</td>
+            </tr>
+            <tr>
+              <td>All SaaS</td>
+              <td>Vendor lock-in via proprietary query languages (NRQL, DQL, KQL) — migrating is painful</td>
+              <td>Standardize on OpenTelemetry from day one as an abstraction layer</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subsection-title fade-in">The Seven Most Common Monitoring Mistakes</h3>
+      <div class="mistakes-list fade-in">
+        <div class="mistake-item">
+          <div class="mistake-icon">⚠</div>
+          <div>
+            <strong>1. Monitoring infrastructure instead of user experience.</strong>
+            Focus on failure rates and latency, not just CPU/memory. A server at 70% utilization is fine; 2% of users failing is not.
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-icon">⚠</div>
+          <div>
+            <strong>2. Alert on every condition instead of every symptom.</strong>
+            Alert on actual impact — error rate increases or SLO violations. Reduces alert fatigue dramatically.
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-icon">⚠</div>
+          <div>
+            <strong>3. Ignoring the cardinality explosion problem.</strong>
+            Using User ID, Request ID, or Pod name as label dimensions turns hundreds of metrics into thousands, spiking storage costs.
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-icon">⚠</div>
+          <div>
+            <strong>4. Not instrumenting at the application layer.</strong>
+            Infrastructure monitoring only gives a partial view. Real issues originate in database queries, API calls, and caching layers. Use OpenTelemetry for deeper visibility.
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-icon">⚠</div>
+          <div>
+            <strong>5. Treating all logs as equal.</strong>
+            Implement structured JSON logging and consistent log levels. Ingest only WARN and above in production. This single change can reduce log costs by 60–80%.
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-icon">⚠</div>
+          <div>
+            <strong>6. Single-tool dependency without an abstraction layer.</strong>
+            Building instrumentation directly against a vendor SDK creates lock-in at the code level. Use OpenTelemetry as your instrumentation layer.
+          </div>
+        </div>
+        <div class="mistake-item">
+          <div class="mistake-icon">⚠</div>
+          <div>
+            <strong>7. Skipping runbooks for alerts.</strong>
+            An alert without a runbook causes panic, not resolution. Every production alert must have an associated runbook linked directly in PagerDuty or Datadog.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ 07 IMPLEMENTATION ═ -->
+  <section class="section" id="implementation">
+    <div class="container">
+      <div class="section-label fade-in">07 — Implementation Guide</div>
+      <h2 class="section-title fade-in">Complete Blueprints by Use Case</h2>
+      <p class="section-intro fade-in">The right stack depends less on "best tools" and more on your team size, budget, and operational ownership. Across all four blueprints, one constant remains: <strong>instrument with OpenTelemetry first</strong>, then route data to the backend(s) you choose.</p>
+
+      <div class="tabs fade-in" id="implementationTabs">
+        <div class="tab-header">
+          <button class="tab-btn active" data-tab="startup" id="tab-startup">Blueprint A<br/><small>Startup (0–20 engineers)</small></button>
+          <button class="tab-btn" data-tab="growth" id="tab-growth">Blueprint B<br/><small>Growth (20–100 engineers)</small></button>
+          <button class="tab-btn" data-tab="enterprise" id="tab-enterprise">Blueprint C<br/><small>Enterprise (100+ engineers)</small></button>
+          <button class="tab-btn" data-tab="selfhosted" id="tab-selfhosted">Blueprint D<br/><small>Self-Hosted</small></button>
+        </div>
+        <div class="tab-content">
+
+          <div class="tab-panel active" id="tab-panel-startup">
+            <div class="blueprint-header">
+              <span class="blueprint-badge badge-green">Early-Stage Startup</span>
+              <span class="blueprint-budget">Budget: &lt; $5K/month</span>
+            </div>
+            <p class="blueprint-goal"><strong>Goal:</strong> Full-stack visibility with minimum operational overhead and predictable cost.</p>
+            <div class="blueprint-stack">
+              <div class="stack-item"><span class="stack-label">Metrics + Dashboards</span><span class="stack-tool">New Relic free tier (100 GB/month, 1 full user)</span></div>
+              <div class="stack-item"><span class="stack-label">Application Performance</span><span class="stack-tool">New Relic APM with OpenTelemetry SDK</span></div>
+              <div class="stack-item"><span class="stack-label">Logs</span><span class="stack-tool">New Relic Log Management via Fluent Bit (JSON structured)</span></div>
+              <div class="stack-item"><span class="stack-label">Alerting</span><span class="stack-tool">New Relic Alerts + PagerDuty free tier (SLO-based alerts)</span></div>
+              <div class="stack-item"><span class="stack-label">Uptime</span><span class="stack-tool">BetterUptime or UptimeRobot free tier</span></div>
+            </div>
+            <div class="blueprint-cost">Estimated Cost: <strong>$0–$500/month</strong> → scales to $2,000–$5,000 at growth stage</div>
+          </div>
+
+          <div class="tab-panel" id="tab-panel-growth">
+            <div class="blueprint-header">
+              <span class="blueprint-badge badge-blue">Growth-Stage Company</span>
+              <span class="blueprint-budget">Budget: $5K–$30K/month</span>
+            </div>
+            <p class="blueprint-goal"><strong>Goal:</strong> Unified observability, distributed tracing, and scalable log analytics without enterprise pricing.</p>
+            <div class="blueprint-stack">
+              <div class="stack-item"><span class="stack-label">Instrumentation</span><span class="stack-tool">OpenTelemetry SDK + OTel Collector (sidecar/DaemonSet)</span></div>
+              <div class="stack-item"><span class="stack-label">Metrics + Dashboards</span><span class="stack-tool">Grafana Cloud (managed) via Prometheus remote_write</span></div>
+              <div class="stack-item"><span class="stack-label">Distributed Tracing</span><span class="stack-tool">Honeycomb via OTel Collector OTLP endpoint</span></div>
+              <div class="stack-item"><span class="stack-label">Log Analytics</span><span class="stack-tool">Grafana Loki (managed) via Promtail/Fluent Bit</span></div>
+              <div class="stack-item"><span class="stack-label">Alerting</span><span class="stack-tool">Grafana Alerting + PagerDuty (SLO burn rate alerts)</span></div>
+            </div>
+            <div class="blueprint-cost">Estimated Cost: <strong>$3,000–$12,000/month</strong> — predictable and scalable</div>
+          </div>
+
+          <div class="tab-panel" id="tab-panel-enterprise">
+            <div class="blueprint-header">
+              <span class="blueprint-badge badge-purple">Enterprise</span>
+              <span class="blueprint-budget">Budget: $30K+/month</span>
+            </div>
+            <p class="blueprint-goal"><strong>Goal:</strong> Maximum automation, enterprise SLAs, full compliance, minimal operational burden.</p>
+            <div class="blueprint-stack">
+              <div class="stack-item"><span class="stack-label">Primary Platform</span><span class="stack-tool">Dynatrace OneAgent via Kubernetes Operator</span></div>
+              <div class="stack-item"><span class="stack-label">Log Analytics</span><span class="stack-tool">Elastic Cloud (managed) for long-term retention, compliance, SIEM</span></div>
+              <div class="stack-item"><span class="stack-label">Custom Metrics</span><span class="stack-tool">Prometheus + VictoriaMetrics (cost-prohibitive in Dynatrace)</span></div>
+              <div class="stack-item"><span class="stack-label">Dashboards</span><span class="stack-tool">Grafana Enterprise (unified across Dynatrace, Elastic, Prometheus)</span></div>
+              <div class="stack-item"><span class="stack-label">AIOps</span><span class="stack-tool">Dynatrace Davis AI + ServiceNow / Jira integration</span></div>
+            </div>
+            <div class="blueprint-cost">Estimated Cost: <strong>$50,000–$150,000/month</strong> — justified by incident reduction ROI</div>
+          </div>
+
+          <div class="tab-panel" id="tab-panel-selfhosted">
+            <div class="blueprint-header">
+              <span class="blueprint-badge badge-grey">Self-Hosted</span>
+              <span class="blueprint-budget">Full data sovereignty</span>
+            </div>
+            <p class="blueprint-goal"><strong>Goal:</strong> Complete data ownership, no vendor lock-in, maximum cost efficiency.</p>
+            <div class="blueprint-stack">
+              <div class="stack-item"><span class="stack-label">Metrics</span><span class="stack-tool">Prometheus + VictoriaMetrics cluster (10× better storage efficiency)</span></div>
+              <div class="stack-item"><span class="stack-label">Logs</span><span class="stack-tool">Grafana Loki on S3/GCS backend (dramatically cheaper than Elasticsearch)</span></div>
+              <div class="stack-item"><span class="stack-label">Traces</span><span class="stack-tool">Grafana Tempo on object storage (scales to billions of traces)</span></div>
+              <div class="stack-item"><span class="stack-label">Dashboards + Alerting</span><span class="stack-tool">Grafana OSS + Alertmanager (GitOps via Grafonnet/Terraform)</span></div>
+              <div class="stack-item"><span class="stack-label">Incident Management</span><span class="stack-tool">Grafana OnCall (open-source) for on-call scheduling</span></div>
+            </div>
+            <div class="blueprint-cost">Estimated Cost: <strong>$500–$5,000/month</strong> infrastructure + 0.5–1 FTE operations at scale</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ 08 TRENDS ═══════ -->
+  <section class="section section-alt" id="trends">
+    <div class="container">
+      <div class="section-label fade-in">08 — 2026 Trend Analysis</div>
+      <h2 class="section-title fade-in">The Observability Landscape is Transforming</h2>
+      <p class="section-intro fade-in">The new wave is guided by standardization, automation, and financial responsibility. This is not merely an idea but a reality shaping observability stack design right now.</p>
+
+      <div class="trends-grid fade-in">
+
+        <div class="trend-card">
+          <div class="trend-num">01</div>
+          <div class="trend-icon">🔌</div>
+          <h3>OpenTelemetry Becomes the Universal Standard</h3>
+          <p>OTel is no longer an emerging project — it has become the default for instrumentation. Adoption has accelerated rapidly; majority of new cloud-native systems now rely on OTel instead of vendor-specific agents.</p>
+          <div class="trend-impact">Instrumentation is no longer a vendor differentiator. Focus shifts to query performance, correlation, and AI-assisted debugging.</div>
+        </div>
+
+        <div class="trend-card">
+          <div class="trend-num">02</div>
+          <div class="trend-icon">🤖</div>
+          <h3>AI-Assisted Incident Response Moves from Gimmick to Core</h3>
+          <p>AI in monitoring has evolved beyond anomaly detection. Platforms now correlate signals across multiple services, identify likely root causes, and provide contextual summaries for faster response.</p>
+          <div class="trend-impact">Next phase: autonomous remediation — scaling services or rolling back deployments automatically.</div>
+        </div>
+
+        <div class="trend-card">
+          <div class="trend-num">03</div>
+          <div class="trend-icon">💰</div>
+          <h3>FinOps Integration — Observability Meets Cost Management</h3>
+          <p>Engineering teams are now expected to understand how system behavior impacts cloud spend. Modern pipelines combine performance metrics, resource utilization, and cost data.</p>
+          <div class="trend-impact">Key question: Which service consumes the most resources, and is it delivering proportional value?</div>
+        </div>
+
+        <div class="trend-card">
+          <div class="trend-num">04</div>
+          <div class="trend-icon">⚙</div>
+          <h3>The Rise of eBPF-Based Observability</h3>
+          <p>eBPF enables monitoring directly at the kernel level — visibility without application-level instrumentation. Tools like Coroot auto-generate service maps, network insights, and latency/error patterns.</p>
+          <div class="trend-impact">Complements application telemetry, especially where instrumentation is incomplete or difficult to maintain.</div>
+        </div>
+
+        <div class="trend-card">
+          <div class="trend-num">05</div>
+          <div class="trend-icon">🔀</div>
+          <h3>Consolidation &amp; M&amp;A Activity</h3>
+          <p>The observability ecosystem has expanded rapidly with overlapping capabilities. This level of fragmentation is unlikely to continue. The market is moving toward vendor consolidation and integration of adjacent capabilities.</p>
+          <div class="trend-impact">Strategic recommendation: build on open standards (OTel, OTLP, Prometheus-compatible pipelines) to remain portable.</div>
+        </div>
+
+      </div>
+
+      <div class="callout callout-success fade-in">
+        <div class="callout-title">✅ Strategic Recommendation</div>
+        Regardless of how the ecosystem evolves, one principle remains consistent: <strong>build your observability architecture on open standards</strong>. Using OpenTelemetry ensures your instrumentation remains portable, platform changes do not require rework, and you avoid long-term vendor lock-in.
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ 09 RECOMMENDATION ═ -->
+  <section class="section" id="recommendation">
+    <div class="container">
+      <div class="section-label fade-in">09 — Stack Recommendation Framework</div>
+      <h2 class="section-title fade-in">Find Your Stack</h2>
+      <p class="section-intro fade-in">Define your profile across five key dimensions, then get a matched stack recommendation. This framework aligns your stack with your actual requirements — not marketing claims.</p>
+
+      <div class="recommender fade-in" id="recommender">
+        <div class="rec-step" id="rec-step-1">
+          <div class="rec-question">Team size?</div>
+          <div class="rec-options">
+            <button class="rec-btn" data-dim="team" data-val="A">A · 1–10 engineers</button>
+            <button class="rec-btn" data-dim="team" data-val="B">B · 11–50 engineers</button>
+            <button class="rec-btn" data-dim="team" data-val="C">C · 51–200 engineers</button>
+            <button class="rec-btn" data-dim="team" data-val="D">D · 200+ engineers</button>
+          </div>
+        </div>
+        <div class="rec-step" id="rec-step-2">
+          <div class="rec-question">Monthly observability budget?</div>
+          <div class="rec-options">
+            <button class="rec-btn" data-dim="budget" data-val="A">A · Under $2K</button>
+            <button class="rec-btn" data-dim="budget" data-val="B">B · $2K–$15K</button>
+            <button class="rec-btn" data-dim="budget" data-val="C">C · $15K–$60K</button>
+            <button class="rec-btn" data-dim="budget" data-val="D">D · $60K+</button>
+          </div>
+        </div>
+        <div class="rec-step" id="rec-step-3">
+          <div class="rec-question">Primary challenge?</div>
+          <div class="rec-options">
+            <button class="rec-btn" data-dim="problem" data-val="A">A · Getting started / no monitoring</button>
+            <button class="rec-btn" data-dim="problem" data-val="B">B · Too many tools / consolidation</button>
+            <button class="rec-btn" data-dim="problem" data-val="C">C · Scale / cost control</button>
+            <button class="rec-btn" data-dim="problem" data-val="D">D · Compliance / data sovereignty</button>
+          </div>
+        </div>
+        <div class="rec-step" id="rec-step-4">
+          <div class="rec-question">Infrastructure type?</div>
+          <div class="rec-options">
+            <button class="rec-btn" data-dim="infra" data-val="A">A · Single cloud, monolith/small services</button>
+            <button class="rec-btn" data-dim="infra" data-val="B">B · Single cloud, microservices</button>
+            <button class="rec-btn" data-dim="infra" data-val="C">C · Multi-cloud / Kubernetes</button>
+            <button class="rec-btn" data-dim="infra" data-val="D">D · Hybrid / on-prem</button>
+          </div>
+        </div>
+        <div class="rec-step" id="rec-step-5">
+          <div class="rec-question">Operational preference?</div>
+          <div class="rec-options">
+            <button class="rec-btn" data-dim="ops" data-val="A">A · Fully managed SaaS only</button>
+            <button class="rec-btn" data-dim="ops" data-val="B">B · Managed with some config</button>
+            <button class="rec-btn" data-dim="ops" data-val="C">C · Comfortable with OSS</button>
+            <button class="rec-btn" data-dim="ops" data-val="D">D · Full self-hosted control</button>
+          </div>
+        </div>
+
+        <div class="rec-result hidden" id="rec-result">
+          <div class="result-title">Your Recommended Stack</div>
+          <div id="result-content"></div>
+          <button class="rec-reset-btn" id="rec-reset">Start Over</button>
+        </div>
+      </div>
+
+      <div class="callout callout-info fade-in" style="margin-top:2rem;">
+        <div class="callout-title">✅ Validate Your Decision — 4 Final Questions</div>
+        <ol class="validation-list">
+          <li><strong>Can we afford this at 2× our current scale?</strong> Run the pricing calculator for expected infrastructure in 12 months, not today.</li>
+          <li><strong>Does this platform support OpenTelemetry natively?</strong> If the answer is 'only with a proprietary agent,' reconsider.</li>
+          <li><strong>Are there clear migration paths if we need to switch?</strong> If the answer is 'rewrite all instrumentation,' that's a red flag.</li>
+          <li><strong>Does the vendor's roadmap align with our direction?</strong> Review public roadmap and recent acquisitions for 24-month alignment.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ 10 CONCLUSION ══ -->
+  <section class="section section-alt" id="conclusion">
+    <div class="container">
+      <div class="section-label fade-in">10 — Conclusion</div>
+      <h2 class="section-title fade-in">The Path Forward</h2>
+      <p class="section-intro fade-in">The monitoring challenges of 2026 arise from increasing system complexity and vague observability plans — not from a lack of instrumentation options.</p>
+
+      <div class="conclusion-pillars fade-in">
+        <div class="conclusion-card">
+          <div class="conclusion-icon">🔌</div>
+          <h3>OpenTelemetry First</h3>
+          <p>Separate instrumentation from platform choice. Once your telemetry pipeline is built on open standards, your system becomes adaptable — no longer locked into a single vendor or pricing model.</p>
+        </div>
+        <div class="conclusion-card">
+          <div class="conclusion-icon">💰</div>
+          <h3>Cost Awareness</h3>
+          <p>A platform that works today may not remain sustainable at scale. Planning for growth — not just current usage — is what prevents expensive migrations later.</p>
+        </div>
+        <div class="conclusion-card">
+          <div class="conclusion-icon">📈</div>
+          <h3>Evolve Deliberately</h3>
+          <p>Observability is not something set up once. As architectures grow more distributed, you must continuously improve how you monitor, alert, and respond.</p>
+        </div>
+      </div>
+
+      <div class="conclusion-banner fade-in">
+        <p>Start with what fits your current stage. Build on open standards. Evolve deliberately.</p>
+        <p class="banner-sub">Because in the end, the goal is not better dashboards — it is <strong>faster understanding, better decisions, and reliable user experience.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ 11 REFERENCES ══ -->
+  <section class="section references-section" id="references">
+    <div class="container">
+      <div class="section-label fade-in">11 — References</div>
+      <h2 class="section-title fade-in">Sources &amp; Further Reading</h2>
+      <ol class="references-list fade-in">
+        <li><a href="https://docs.datadoghq.com/account_management/billing/pricing/" target="_blank">Datadog Inc., "Datadog — Official Billing &amp; Pricing Documentation"</a></li>
+        <li><a href="https://www.libertify.com/interactive-library/cncf-kubernetes-ai-cloud-native-survey-2025/" target="_blank">Cloud Native Computing Foundation, "CNCF Cloud Native Survey 2025"</a></li>
+        <li><a href="https://opentelemetry.io/" target="_blank">OpenTelemetry / CNCF, "OpenTelemetry Official Website"</a></li>
+        <li><a href="https://opentelemetry.io/blog/2025/stability-proposal-announcement/" target="_blank">OpenTelemetry Project, "OpenTelemetry Stability Proposal"</a></li>
+        <li><a href="https://www.dynatrace.com/news/blog/state-of-observability-2025-ai-trust-roi/" target="_blank">Dynatrace, "State of Observability 2025"</a></li>
+        <li><a href="https://www.cockroachlabs.com/blog/the-state-of-resilience-2025-reveals-the-true-cost-of-downtime/" target="_blank">Cockroach Labs, "State of Resilience 2025"</a></li>
+        <li><a href="https://www.ciodive.com/news/IT-outage-cost-report-new-relic/696359/" target="_blank">CIO Dive, "IT Outage Cost Report"</a></li>
+        <li><a href="https://siteqwality.com/blog/true-cost-website-downtime-2025/" target="_blank">SiteQwality, "True Cost of Downtime 2025"</a></li>
+        <li><a href="https://uptrace.dev/tools/top-observability-tools" target="_blank">Uptrace, "Top Observability Tools 2026"</a></li>
+        <li><a href="https://www.techtarget.com/searchapparchitecture/tip/Dynatrace-bets-on-causal-intelligence-for-AI-observability" target="_blank">TechTarget, "Dynatrace AI Observability"</a></li>
+        <li><a href="https://signoz.io/blog/datadog-pricing/" target="_blank">SigNoz, "Datadog Pricing Explained"</a></li>
+        <li><a href="https://www.cncf.io/blog/2025/12/16/how-to-build-a-cost-effective-observability-platform-with-opentelemetry/" target="_blank">CNCF Blog, "Cost-effective Observability with OpenTelemetry"</a></li>
+        <li><a href="https://www.cncf.io/blog/2025/11/27/from-chaos-to-clarity-how-opentelemetry-unified-observability-across-clouds/" target="_blank">CNCF Blog, "OpenTelemetry Across Clouds Case Study"</a></li>
+        <li><a href="https://www.researchnester.com/reports/observability-tools-and-platforms-market/8139" target="_blank">Research Nester, "Observability Market Forecast"</a></li>
+        <li><a href="https://www.landbase.com/blog/fastest-growing-observability-platforms" target="_blank">Landbase, "Fastest Growing Observability Platforms"</a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-brand">☁ Cloud Monitoring 2026</span>
+        <span class="footer-copy">A Definitive Guide for Engineers &amp; Decision-Makers</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
